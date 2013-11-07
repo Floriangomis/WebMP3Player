@@ -9,9 +9,6 @@
 #import "downloadJsonOperation.h"
 
 @interface downloadJsonOperation()
-
-//use to put picture in good row in array
-@property (nonatomic) NSURLRequest* url;
 // Connection
 @property (strong, nonatomic) NSURLConnection *connection;
 // Datas related attr.
@@ -30,7 +27,6 @@
 @synthesize request = _request;
 @synthesize connection = _connection;
 @synthesize receivedData = _receivedData;
-@synthesize url = _url;
 @synthesize arrayOfTracks = _arrayOfTracks;
 
 #pragma mark - Lifecycle
