@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface downloadJsonOperation : NSOperation
+@interface downloadJsonOperation : NSOperation <NSURLConnectionDelegate>
+@property (strong, nonatomic, readonly) NSURLRequest *request;
+@property (nonatomic, getter = getArrayOfTrack) NSMutableArray *arrayOfTracks;
 
+- (id)initWithRequest:(NSURLRequest *)request;
 @end
+
+

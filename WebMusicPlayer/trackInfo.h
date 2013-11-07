@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface trackInfo : NSObject <NSURLConnectionDelegate>
--(id) initWithUrlImg:(NSString*)urlImg AndWith:(NSString*)titleSong;
-@property (strong, nonatomic) NSString *titreMp3;
-@property (strong, nonatomic) NSURL *urlMp3;
-@property (strong, nonatomic) NSMutableData *dataPicture;
-@property (strong, nonatomic) NSMutableData *dataMp3;
--(void) downloadDataOfTack;
+@interface trackInfo : NSObject
+-(id) initWithUrlImg:(NSString*)urlImg AndWith:(NSString*)titleSong idTrack:(NSInteger)idsong;
+@property (nonatomic) NSString *titreMp3;
+@property (nonatomic) NSURL *urlMp3;
+@property (nonatomic) UIImage *uImage;
+@property (nonatomic) NSMutableData *dataPicture;
+@property (nonatomic) NSMutableData *dataMp3;
+@property (nonatomic) NSURL *urlPicture;
+@property (nonatomic) NSInteger *idTrack;
 @end

@@ -12,7 +12,7 @@
 @end
 
 @implementation TableCell
-@synthesize imageView = _imageView;
+@synthesize cellImage = _cellImage;
 @synthesize title = _title;
 
 
@@ -20,7 +20,6 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
     }
     return self;
 }
@@ -28,20 +27,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-}
-
-- (IBAction)deleteTapped:(id)sender {
-    [self.delegate deleteButtonTappedOnCell:self];
-}
-
-- (IBAction)playSong:(id)sender {
-    [self.delegate playSong:self];
-}
-
-
-- (IBAction)stopSong:(id)sender {
-    [self.delegate stopSong:self];
+    
 }
 
 @end

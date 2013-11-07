@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TableCell.h"
 
-@interface HomeController : UIViewController <UITableViewDataSource, UITableViewDelegate,TableCellDelegate>
+@interface lecteurWebViewController : UIViewController 
 
 @end
