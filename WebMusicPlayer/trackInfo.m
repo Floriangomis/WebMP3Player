@@ -19,7 +19,7 @@
 @synthesize idTrack = _idTrack;
 @synthesize uImage = _uImage;
 
--(id) initWithUrlImg:(NSString*)urlImg AndWith:(NSString*)titleSong idTrack:(NSInteger)idSong{
+-(id) initWithUrlImg:(NSString*)urlImg AndWith:(NSString*)titleSong idTrack:(NSInteger)idSong urlMp3:(NSString*)urlMp3{
     self = [super init];
     if (self)
     {
@@ -27,7 +27,12 @@
         _dataMp3 = [[NSMutableData alloc] initWithCapacity:0];
         _urlPicture = [[NSURL alloc] initWithString:urlImg];
         _idTrack = &idSong;
-        _urlMp3 = [[NSURL alloc] initWithString:@"http://a.tumblr.com/tumblr_m974imgfu41qfx67fo1.mp3"];
+        
+        if(![urlMp3 isEqualToString:@""])
+            _urlMp3 = [[NSURL alloc] initWithString:urlMp3];
+        else
+            _urlMp3 = [[NSURL alloc] initWithString:@"No"];
+        
         _titreMp3 = titleSong;
         _uImage = [[UIImage alloc] init];
     }

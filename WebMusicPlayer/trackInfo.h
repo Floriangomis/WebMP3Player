@@ -11,7 +11,7 @@
 #import <CoreData/CoreData.h>
 
 @interface trackInfo : NSObject
--(id) initWithUrlImg:(NSString*)urlImg AndWith:(NSString*)titleSong idTrack:(NSInteger)idsong;
+-(id) initWithUrlImg:(NSString*)urlImg AndWith:(NSString*)titleSong idTrack:(NSInteger)idsong urlMp3:(NSString*)urlMp3;
 @property (nonatomic) NSString *titreMp3;
 @property (nonatomic) NSURL *urlMp3;
 @property (nonatomic) UIImage *uImage;
