@@ -12,7 +12,6 @@
 @property (nonatomic) NSOperationQueue *Queue;
 @property (nonatomic) downloadJsonOperation *jsonDownloadOperation;
 @property (nonatomic) NSMutableArray *jsonArray;
-@property (nonatomic) UITableView *newsTableView;
 @end
 
 @implementation contentManager
@@ -23,6 +22,7 @@
 @synthesize arrayOfTracks = _arrayOfTracks;
 @synthesize jsonReceived = _jsonReceived;
 @synthesize imageReceived = _imageReceived;
+@synthesize currentTableView = _currentTableView;
 
 
 + (id)sharedManager{
@@ -43,7 +43,7 @@
         [[self Queue] setName:@"jsonOperation"];
         [[self Queue] setMaxConcurrentOperationCount:20];
         _jsonDownloadOperation = [[downloadJsonOperation alloc] initWithRequest:[[NSURLRequest alloc] initWithURL:[self urlJson]]];
-        _newsTableView = [[UITableView alloc] init];
+        _currentTableView = [[UITableView alloc] init];
         _jsonReceived = NO;
         _imageReceived = NO;
     }

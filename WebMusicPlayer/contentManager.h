@@ -15,12 +15,12 @@
 @property (nonatomic, getter = getimageReceived) BOOL imageReceived;
 @property (nonatomic, getter = getData) NSMutableData* dataJson;
 @property (nonatomic, getter = getArrayOfTrack) NSMutableArray *arrayOfTracks;
+@property (nonatomic) UITableView *currentTableView;
 
 +(id)sharedManager;
 -(void)downloadJsonWithUrl;
 -(void) downloadimageOfTrack:(NSMutableArray*)arrayOfTracks;
 -(NSString*)getStringUrl;
--(void)transformJsonDataToObject:(NSData*)json;
 -(void) getBackPicture:(UIImage*)data urlTrack:(NSURLRequest*)urlTrack;
 
 @end
