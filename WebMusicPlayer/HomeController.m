@@ -9,18 +9,15 @@
 #import "HomeController.h"
 
 @interface HomeController ()
-@property (nonatomic) NSMutableArray *trackList;
 @property (nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation HomeController
-@synthesize trackList = _trackList;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if ((self = [super initWithCoder:aDecoder])){
-         _trackList = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -40,22 +37,31 @@
     }
     else{
         tablecell.title.text = @"Default Title";
-        [tablecell.cellImage setImage:[UIImage imageNamed:@"defaultPicture.png"]];
+        [tablecell.cellImage setImage:[UIImage imageNamed:@"defaultPicture.jpg"]];
     }
     tablecell.delegate = self;
     return tablecell;
 }
 
+
 - (void)viewDidLoad{
+    [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"detailNew"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        homeControllerPlayer *destViewController = segue.destinationViewController;
+        destViewController.titreDetailString = [[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] titreMp3];
+        destViewController.imageDetailUimage = [[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] uImage];
+    }
 }
 
 
