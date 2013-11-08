@@ -61,6 +61,7 @@
         homeControllerPlayer *destViewController = segue.destinationViewController;
         destViewController.titreDetailString = [[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] titreMp3];
         destViewController.imageDetailUimage = [[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] uImage];
+        destViewController.urlSong = [[[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] urlMp3] absoluteString];;
     }
 }
 
