@@ -21,13 +21,13 @@
 		170F04A61826B2E7008C7522 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170F04851826B2E7008C7522 /* UIKit.framework */; };
 		170F04AE1826B2E7008C7522 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 170F04AC1826B2E7008C7522 /* InfoPlist.strings */; };
 		170F04B01826B2E7008C7522 /* WebMusicPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 170F04AF1826B2E7008C7522 /* WebMusicPlayerTests.m */; };
+		1751F1FA182C179D00DCB1C7 /* homeControllerPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1751F1F9182C179D00DCB1C7 /* homeControllerPlayer.m */; };
 		176B352D1826B8C1006B2C5E /* lecteurWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 176B352C1826B8C1006B2C5E /* lecteurWebViewController.m */; };
 		176B35321826B8CD006B2C5E /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 176B352F1826B8CD006B2C5E /* TableCell.m */; };
-		179D915F182B048600452618 /* clipse1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 179D915E182B048600452618 /* clipse1.jpg */; };
 		17A2F86F182946EF00E6ACFF /* contentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F86E182946EF00E6ACFF /* contentManager.m */; };
 		17A2F876182A56E100E6ACFF /* downloadJsonOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F875182A56E100E6ACFF /* downloadJsonOperation.m */; };
 		17D82740182A74F100721C2C /* trackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D8273F182A74F100721C2C /* trackInfo.m */; };
-		17D82743182A969C00721C2C /* defaultPicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 17D82742182A969C00721C2C /* defaultPicture.png */; };
+		17E50911182C570F00C9B6CF /* defaultPicture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17E50910182C570F00C9B6CF /* defaultPicture.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,18 +60,19 @@
 		170F04AB1826B2E7008C7522 /* WebMusicPlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebMusicPlayerTests-Info.plist"; sourceTree = "<group>"; };
 		170F04AD1826B2E7008C7522 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		170F04AF1826B2E7008C7522 /* WebMusicPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebMusicPlayerTests.m; sourceTree = "<group>"; };
+		1751F1F8182C179D00DCB1C7 /* homeControllerPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeControllerPlayer.h; sourceTree = "<group>"; };
+		1751F1F9182C179D00DCB1C7 /* homeControllerPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeControllerPlayer.m; sourceTree = "<group>"; };
 		176B352B1826B8C1006B2C5E /* lecteurWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lecteurWebViewController.h; sourceTree = "<group>"; };
 		176B352C1826B8C1006B2C5E /* lecteurWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lecteurWebViewController.m; sourceTree = "<group>"; };
 		176B352E1826B8CD006B2C5E /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
 		176B352F1826B8CD006B2C5E /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
-		179D915E182B048600452618 /* clipse1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clipse1.jpg; sourceTree = "<group>"; };
 		17A2F86D182946EF00E6ACFF /* contentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contentManager.h; sourceTree = "<group>"; };
 		17A2F86E182946EF00E6ACFF /* contentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contentManager.m; sourceTree = "<group>"; };
 		17A2F874182A56E100E6ACFF /* downloadJsonOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downloadJsonOperation.h; sourceTree = "<group>"; };
 		17A2F875182A56E100E6ACFF /* downloadJsonOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = downloadJsonOperation.m; sourceTree = "<group>"; };
 		17D8273E182A74F100721C2C /* trackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trackInfo.h; sourceTree = "<group>"; };
 		17D8273F182A74F100721C2C /* trackInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trackInfo.m; sourceTree = "<group>"; };
-		17D82742182A969C00721C2C /* defaultPicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPicture.png; sourceTree = "<group>"; };
+		17E50910182C570F00C9B6CF /* defaultPicture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultPicture.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +132,7 @@
 		170F04871826B2E7008C7522 /* WebMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				179D915E182B048600452618 /* clipse1.jpg */,
-				17D82742182A969C00721C2C /* defaultPicture.png */,
+				17E50910182C570F00C9B6CF /* defaultPicture.jpg */,
 				176B35351826B951006B2C5E /* Views */,
 				17D82741182A74F800721C2C /* Entity */,
 				176B353D1826D374006B2C5E /* customOperation */,
@@ -183,6 +183,8 @@
 				170F04971826B2E7008C7522 /* HomeController.m */,
 				176B352B1826B8C1006B2C5E /* lecteurWebViewController.h */,
 				176B352C1826B8C1006B2C5E /* lecteurWebViewController.m */,
+				1751F1F8182C179D00DCB1C7 /* homeControllerPlayer.h */,
+				1751F1F9182C179D00DCB1C7 /* homeControllerPlayer.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -299,10 +301,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				179D915F182B048600452618 /* clipse1.jpg in Resources */,
 				170F049D1826B2E7008C7522 /* Images.xcassets in Resources */,
 				170F048C1826B2E7008C7522 /* InfoPlist.strings in Resources */,
-				17D82743182A969C00721C2C /* defaultPicture.png in Resources */,
+				17E50911182C570F00C9B6CF /* defaultPicture.jpg in Resources */,
 				170F04951826B2E7008C7522 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +330,7 @@
 				17A2F86F182946EF00E6ACFF /* contentManager.m in Sources */,
 				17A2F876182A56E100E6ACFF /* downloadJsonOperation.m in Sources */,
 				170F048E1826B2E7008C7522 /* main.m in Sources */,
+				1751F1FA182C179D00DCB1C7 /* homeControllerPlayer.m in Sources */,
 				17D82740182A74F100721C2C /* trackInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
