@@ -44,7 +44,7 @@
                                         <connections>
                                             <outlet property="cellImage" destination="9uR-Xw-UuW" id="9hZ-Zy-I3F"/>
                                             <outlet property="title" destination="08O-tK-pCK" id="UNt-FF-2F1"/>
-                                            <segue destination="c9M-Rd-lcj" kind="push" id="fjY-1I-65Y"/>
+                                            <segue destination="c9M-Rd-lcj" kind="push" identifier="detailNew" id="fjY-1I-65Y"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -59,26 +59,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7m-MA-zIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648" y="-327"/>
+            <point key="canvasLocation" x="1514" y="-327"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Controller Player-->
         <scene sceneID="Jbq-78-TXa">
             <objects>
-                <viewController id="c9M-Rd-lcj" sceneMemberID="viewController">
+                <viewController id="c9M-Rd-lcj" customClass="homeControllerPlayer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fmj-sl-xI2"/>
                         <viewControllerLayoutGuide type="bottom" id="wR4-G8-0s3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YAJ-wa-viM">
+                    <view key="view" contentMode="scaleToFill" id="YAJ-wa-viM" customClass="HomeControllerPlayer">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JsL-re-HhI">
+                                <rect key="frame" x="20" y="85" width="280" height="149"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titre Artiste" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmn-VV-89t">
+                                <rect key="frame" x="26" y="234" width="274" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="XRH-Zp-r8o"/>
+                    <connections>
+                        <outlet property="imageDetail" destination="JsL-re-HhI" id="Dx9-GP-L2Q"/>
+                        <outlet property="titreDetail" destination="jmn-VV-89t" id="WP6-qo-NMy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SbN-yL-yd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="-324"/>
+            <point key="canvasLocation" x="1893" y="-327"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xWo-o2-Vfp">
