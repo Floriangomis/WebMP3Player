@@ -27,6 +27,10 @@
     return 20;
 }
 
+// Thanks Stefan :)D
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+[tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"TableCellID";
@@ -59,11 +63,14 @@
     if ([segue.identifier isEqualToString:@"detailNew"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         homeControllerPlayer *destViewController = segue.destinationViewController;
+        
         destViewController.titreDetailString = [[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] titreMp3];
         destViewController.imageDetailUimage = [[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] uImage];
-        destViewController.urlSong = [[[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] urlMp3] absoluteString];;
+        if (![[[[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] urlMp3] absoluteString] isEqualToString:@"No"]) {
+            destViewController.urlSong = [[[[[contentManager sharedManager] getArrayOfTrack] objectAtIndex:indexPath.row] urlMp3] absoluteString];
+        }
+        
     }
 }
-
 
 @end

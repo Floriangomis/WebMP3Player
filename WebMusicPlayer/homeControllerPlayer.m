@@ -35,28 +35,58 @@
         _currentItem = [[AVPlayerItem alloc] init];
         _urlSong = @"DefaultUrl";
         _audioPlayer = [[AVPlayer alloc]init];
+        
     }
     return self;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if ([keyPath isEqualToString:@"status"] )
+    {
+        [self statusChanged];
+    }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.imageDetail setImage:self.imageDetailUimage];
-    self.titreDetail.text = self.titreDetailString;
-    
-    [self configurePlayer];
-    
-    // son qu'on va jouer
-    self.currentItem = [AVPlayerItem playerItemWithURL:[[NSURL alloc] initWithString:self.urlSong]];
-    [self.audioPlayer replaceCurrentItemWithPlayerItem:self.currentItem];
-    [self.sliderOutlet setMaximumValue:self.audioPlayer.currentItem.duration.value/self.audioPlayer.currentItem.duration.timescale];
-
+    // if there is an url for mp3 in tracklist Object we can initialize player for mp3
+    if (![self.urlSong isEqualToString:@"DefaultUrl"]) {
+        // we put picture and text on Uimage and label from view
+        [self.imageDetail setImage:self.imageDetailUimage];
+        self.titreDetail.text = self.titreDetailString;
+        [self configurePlayer];
+        // son qu'on va jouer
+        self.currentItem = [AVPlayerItem playerItemWithURL:[[NSURL alloc] initWithString:self.urlSong]];
+        [self.audioPlayer replaceCurrentItemWithPlayerItem:self.currentItem];
+        [self.audioPlayer.currentItem addObserver:self forKeyPath:@"status" options:0 context:nil];
+    }
+    // otherwise we just put some information on the screen
+    else{
+        [self.imageDetail setImage:self.imageDetailUimage];
+        self.titreDetail.text = self.titreDetailString;
+        self.togglePlayPause.enabled = FALSE;
+    }
 }
+
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if (![self.urlSong isEqualToString:@"DefaultUrl"]) {
+        [self.audioPlayer.currentItem removeObserver:self forKeyPath:@"status"];
+        [self.audioPlayer pause];
+        self.sliderOutlet = nil;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    NSLog(@"Memory Warning");
     // Dispose of any resources that can be recreated.
 }
 
@@ -74,6 +104,10 @@
     [self.audioPlayer seekToTime:CMTimeMakeWithSeconds((int)(self.sliderOutlet.value) , 1)];
 }
 
+-(void) statusChanged{
+        [self.sliderOutlet setMaximumValue:self.audioPlayer.currentItem.duration.value/self.audioPlayer.currentItem.duration.timescale];
+}
+
 -(void) configurePlayer {
     __block homeControllerPlayer * weakSelf = self;
     [self.audioPlayer addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(1, 1)
@@ -82,19 +116,14 @@
                                                   if(!time.value) {
                                                       return;
                                                   }
-                                                  
                                                   int currentTime = (int)((weakSelf.audioPlayer.currentTime.value)/weakSelf.audioPlayer.currentTime.timescale);
                                                   int currentMins = (int)(currentTime/60);
                                                   int currentSec  = (int)(currentTime%60);
-                                                  
-                                                  NSString * durationLabel =
-                                                  [NSString stringWithFormat:@"%02d:%02d",currentMins,currentSec];
+                                                  NSString * durationLabel = [NSString stringWithFormat:@"%02d:%02d",currentMins,currentSec];
                                                   weakSelf.durationOutlet.text = durationLabel;
                                                   weakSelf.sliderOutlet.value = currentTime;
                                               }];
     
 }
-
-
 
 @end

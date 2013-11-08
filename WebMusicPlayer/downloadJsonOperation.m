@@ -172,7 +172,7 @@
         for (int i = 0; i < [jsonArray  count]; i++) {
             NSString *urlImage = [jsonArray[i] valueForKey:@"url_img"];
             NSInteger idTrack = [[jsonArray[i] valueForKey:@"id_new"] integerValue];
-            [self.arrayOfTracks addObject: [[trackInfo alloc] initWithUrlImg:[NSString stringWithFormat:@"http://www.otpo.fr/uploads/%@",urlImage] AndWith:[jsonArray[i] valueForKey:@"titre_new"] idTrack:idTrack]];
+            [self.arrayOfTracks addObject: [[trackInfo alloc] initWithUrlImg:[NSString stringWithFormat:@"http://www.otpo.fr/uploads/%@",urlImage] AndWith:[jsonArray[i] valueForKey:@"titre_new"] idTrack:idTrack urlMp3:[jsonArray[i] valueForKey:@"url_mp3"]]];
         }
     }
         [[contentManager sharedManager] setJsonReceived:TRUE];
