@@ -1,4 +1,4 @@
-//
+		//
 //  homeControllerPlayer.m
 //  WebMusicPlayer
 //
@@ -101,8 +101,15 @@
     }
 }
 - (IBAction)slidderDragged:(id)sender {
-    [self.audioPlayer seekToTime:CMTimeMakeWithSeconds((int)(self.sliderOutlet.value) , 1)];
+    if([self.audioPlayer rate] != 0.0) {
+        [self.audioPlayer pause];
+        [self.audioPlayer seekToTime:CMTimeMakeWithSeconds((int)(self.sliderOutlet.value) , 1)];
+    }
+    if([self.audioPlayer rate] == 0.0)
+        [self.audioPlayer play];
 }
+
+
 
 -(void) statusChanged{
         [self.sliderOutlet setMaximumValue:self.audioPlayer.currentItem.duration.value/self.audioPlayer.currentItem.duration.timescale];
