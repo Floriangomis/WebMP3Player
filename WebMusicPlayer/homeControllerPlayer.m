@@ -101,6 +101,7 @@
         [self.togglePlayPause setSelected:YES];
     }
 }
+
 - (IBAction)slidderDragged:(id)sender {
     if([self.audioPlayer rate] != 0.0) {
         [self.audioPlayer pause];
