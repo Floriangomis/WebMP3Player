@@ -72,7 +72,8 @@
     }
 }
 
-
+// Regarder si il n'y a pas une méthode plus précise qui regarde si on retourne via le segue sur la page homeController
+// Parceque si on va sur une autre vue de la tabar. cette methode delete tout et si on reviens et qu'ensuite on back il voudra ré effacer quelque chose qui n'existe pas.
 - (void)viewWillDisappear:(BOOL)animated
 {
     if (![self.urlSong isEqualToString:@"DefaultUrl"]) {

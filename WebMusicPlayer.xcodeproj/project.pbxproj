@@ -21,11 +21,13 @@
 		170F04A61826B2E7008C7522 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170F04851826B2E7008C7522 /* UIKit.framework */; };
 		170F04AE1826B2E7008C7522 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 170F04AC1826B2E7008C7522 /* InfoPlist.strings */; };
 		170F04B01826B2E7008C7522 /* WebMusicPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 170F04AF1826B2E7008C7522 /* WebMusicPlayerTests.m */; };
+		1733C315183394E90062B3B7 /* fonduBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1733C314183394E90062B3B7 /* fonduBackground.jpg */; };
 		1751F1FA182C179D00DCB1C7 /* homeControllerPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1751F1F9182C179D00DCB1C7 /* homeControllerPlayer.m */; };
 		176B352D1826B8C1006B2C5E /* lecteurWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 176B352C1826B8C1006B2C5E /* lecteurWebViewController.m */; };
 		176B35321826B8CD006B2C5E /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 176B352F1826B8CD006B2C5E /* TableCell.m */; };
 		17A2F86F182946EF00E6ACFF /* contentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F86E182946EF00E6ACFF /* contentManager.m */; };
 		17A2F876182A56E100E6ACFF /* downloadJsonOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F875182A56E100E6ACFF /* downloadJsonOperation.m */; };
+		17B6675B1832A38D00CCC80E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B6675A1832A38D00CCC80E /* Crashlytics.framework */; };
 		17D82740182A74F100721C2C /* trackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D8273F182A74F100721C2C /* trackInfo.m */; };
 		17E50911182C570F00C9B6CF /* defaultPicture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17E50910182C570F00C9B6CF /* defaultPicture.jpg */; };
 		17E50922182CE1E900C9B6CF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E50921182CE1E900C9B6CF /* CoreMedia.framework */; };
@@ -63,6 +65,7 @@
 		170F04AB1826B2E7008C7522 /* WebMusicPlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebMusicPlayerTests-Info.plist"; sourceTree = "<group>"; };
 		170F04AD1826B2E7008C7522 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		170F04AF1826B2E7008C7522 /* WebMusicPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebMusicPlayerTests.m; sourceTree = "<group>"; };
+		1733C314183394E90062B3B7 /* fonduBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fonduBackground.jpg; path = ../../fonduBackground.jpg; sourceTree = "<group>"; };
 		1751F1F8182C179D00DCB1C7 /* homeControllerPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeControllerPlayer.h; sourceTree = "<group>"; };
 		1751F1F9182C179D00DCB1C7 /* homeControllerPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeControllerPlayer.m; sourceTree = "<group>"; };
 		176B352B1826B8C1006B2C5E /* lecteurWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lecteurWebViewController.h; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		17A2F86E182946EF00E6ACFF /* contentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contentManager.m; sourceTree = "<group>"; };
 		17A2F874182A56E100E6ACFF /* downloadJsonOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downloadJsonOperation.h; sourceTree = "<group>"; };
 		17A2F875182A56E100E6ACFF /* downloadJsonOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = downloadJsonOperation.m; sourceTree = "<group>"; };
+		17B6675A1832A38D00CCC80E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		17D8273E182A74F100721C2C /* trackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trackInfo.h; sourceTree = "<group>"; };
 		17D8273F182A74F100721C2C /* trackInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trackInfo.m; sourceTree = "<group>"; };
 		17E50910182C570F00C9B6CF /* defaultPicture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultPicture.jpg; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				170F04841826B2E7008C7522 /* CoreGraphics.framework in Frameworks */,
 				170F04861826B2E7008C7522 /* UIKit.framework in Frameworks */,
 				170F04821826B2E7008C7522 /* Foundation.framework in Frameworks */,
+				17B6675B1832A38D00CCC80E /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +135,7 @@
 		170F04801826B2E7008C7522 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17B6675A1832A38D00CCC80E /* Crashlytics.framework */,
 				17E50925182CE1F900C9B6CF /* MediaPlayer.framework */,
 				17E50923182CE1F100C9B6CF /* AVFoundation.framework */,
 				17E50921182CE1E900C9B6CF /* CoreMedia.framework */,
@@ -145,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				17E50910182C570F00C9B6CF /* defaultPicture.jpg */,
+				1733C314183394E90062B3B7 /* fonduBackground.jpg */,
+				1733C31118338FB10062B3B7 /* Custom */,
 				176B35351826B951006B2C5E /* Views */,
 				17D82741182A74F800721C2C /* Entity */,
 				176B353D1826D374006B2C5E /* customOperation */,
@@ -188,6 +196,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1733C31118338FB10062B3B7 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
 		176B35341826B90A006B2C5E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,8 +228,8 @@
 		176B35361826C41B006B2C5E /* ContentManager */ = {
 			isa = PBXGroup;
 			children = (
-				17A2F86D182946EF00E6ACFF /* contentManager.h */,
 				17A2F86E182946EF00E6ACFF /* contentManager.m */,
+				17A2F86D182946EF00E6ACFF /* contentManager.h */,
 			);
 			name = ContentManager;
 			sourceTree = "<group>";
@@ -247,6 +262,7 @@
 				170F047A1826B2E7008C7522 /* Sources */,
 				170F047B1826B2E7008C7522 /* Frameworks */,
 				170F047C1826B2E7008C7522 /* Resources */,
+				17B667591832A33900CCC80E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -316,6 +332,7 @@
 				170F049D1826B2E7008C7522 /* Images.xcassets in Resources */,
 				170F048C1826B2E7008C7522 /* InfoPlist.strings in Resources */,
 				17E50911182C570F00C9B6CF /* defaultPicture.jpg in Resources */,
+				1733C315183394E90062B3B7 /* fonduBackground.jpg in Resources */,
 				170F04951826B2E7008C7522 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +346,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17B667591832A33900CCC80E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run f9c31228c5cf6f23b497144e0acdd2c27f5f5232";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		170F047A1826B2E7008C7522 /* Sources */ = {
@@ -470,6 +503,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Florian/Desktop/WebMusicPlayer,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebMusicPlayer/WebMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = "WebMusicPlayer/WebMusicPlayer-Info.plist";
@@ -483,6 +521,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Florian/Desktop/WebMusicPlayer,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebMusicPlayer/WebMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = "WebMusicPlayer/WebMusicPlayer-Info.plist";

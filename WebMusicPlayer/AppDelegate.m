@@ -12,6 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Crashlytics startWithAPIKey:@"f9c31228c5cf6f23b497144e0acdd2c27f5f5232"];
     [self createContentManager];
     return YES;
 }

@@ -47,7 +47,6 @@
     return tablecell;
 }
 
-
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.tableView.delegate = self;
